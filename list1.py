@@ -6,6 +6,7 @@ Kenzie assignment: List1
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
 __author__ = "Kevin Blount"
+__author2__ = "David R"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -25,9 +26,13 @@ __author__ = "Kevin Blount"
 # Note: python does not have a ++ operator, but += works.
 
 
+# Coach David R helped construct for loop
 def match_ends(words):
-    # your code here
-    return
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return count
 
 
 # B. front_x
