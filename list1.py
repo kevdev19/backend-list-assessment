@@ -26,7 +26,7 @@ __author2__ = "David R"
 # Note: python does not have a ++ operator, but += works.
 
 
-# Coach David R helped construct for loop
+# Coach David R helped construct 'for' loop
 def match_ends(words):
     count = 0
     for word in words:
@@ -47,8 +47,13 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
+    words.sort()
+    a_list = words[:3]
+    z_list = words[-2:]
+    comb_list = []
+    comb_list.extend(z_list)
+    comb_list.extend(a_list)
+    return comb_list
 
 
 # C. sort_last
