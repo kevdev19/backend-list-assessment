@@ -46,8 +46,11 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
-    # your code here
-    return
+    comb_list = [list1, list2]
+    new_list = []
+    new_list.extend(comb_list[0])
+    new_list.extend(comb_list[1])
+    return new_list
 
 
 # Provided simple test() function used in main() to print
