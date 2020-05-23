@@ -5,7 +5,8 @@ Kenzie assignment: List1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Kevin Blount"
+__author2__ = "David R"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -25,9 +26,13 @@ __author__ = "???"
 # Note: python does not have a ++ operator, but += works.
 
 
+# Coach David R helped construct 'for' loop
 def match_ends(words):
-    # your code here
-    return
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return count
 
 
 # B. front_x
@@ -42,8 +47,13 @@ def match_ends(words):
 
 
 def front_x(words):
-    # your code here
-    return
+    words.sort()
+    a_list = words[:3]
+    z_list = words[-2:]
+    comb_list = []
+    comb_list.extend(z_list)
+    comb_list.extend(a_list)
+    return comb_list
 
 
 # C. sort_last
@@ -55,9 +65,22 @@ def front_x(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 
 
+# This code taken from - https://stackoverflow.com/questions/34752610/python-tuples-sorting
+# Code may change
 def sort_last(tuples):
-    # your code here
-    return
+    list2 = []
+    list3 = []
+    for t in tuples:
+        list2.append(t[1])
+
+    list2.sort()
+
+    for l in list2:
+        for q in tuples:
+            if l == int(q[1],):
+                list3.append(q)
+
+    return list3
 
 
 # Provided simple test() function used in main() to print
