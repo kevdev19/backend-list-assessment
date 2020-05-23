@@ -66,8 +66,19 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    # your code here
-    return
+    list2 = []
+    list3 = []
+    for t in tuples:
+        list2.append(t[1])
+
+    list2.sort()
+
+    for l in list2:
+        for q in tuples:
+            if l == int(q[1],):
+                list3.append(q)
+
+    return list3
 
 
 # Provided simple test() function used in main() to print
