@@ -28,8 +28,10 @@ __author__ = "Kevin Blount"
 
 
 def remove_adjacent(nums):
-    # your code here
-    return
+    for x, y in zip(nums, nums[1:]):
+        if x == y:
+            nums = list(dict.fromkeys(nums))
+    return nums
 
 
 # E. linear_merge
